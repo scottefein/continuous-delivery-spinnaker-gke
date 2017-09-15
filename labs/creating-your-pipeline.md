@@ -31,7 +31,7 @@ You will now create the continuous delivery pipeline from the Spinnaker UI. This
 
     ```shell
     export PROJECT=$(gcloud info --format='value(config.project)')
-    sed s/PROJECT/$PROJECT/g spinnaker/pipeline-deploy.json | curl -d@- -X POST --header "Content-Type: application/json" -- header "Accept: */*" http://localhost:8080/gate/pipelines
+    sed s/PROJECT/$PROJECT/g spinnaker/pipeline-deploy.json | curl -d@- -X POST --header "Content-Type: application/json" --header "Accept: */*" http://localhost:8080/gate/pipelines
     ```
 
 1. In the Spinnaker UI, click the Pipelines button along the top navigation bar
