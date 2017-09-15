@@ -76,5 +76,9 @@ You should now see the following screen:
 followed by the Spinnaker UI:
 ![](../docs/img/image25.png)
 
+To actually expose Spinnaker to the world-
+
+kubectl expose deployment spinnaker-spinnaker-deck --type=LoadBalancer --name=spinnaker-deck-ui
+
 # What's Next
 Now that you have Spinnaker installed on your GKE cluster, it's time to create container images to deploy in the pipeline we'll be creating later.
